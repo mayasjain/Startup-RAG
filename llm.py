@@ -9,7 +9,12 @@ _client = None
 def _get_client():
     global _client
     if _client is None:
-        _client = Groq(api_key=os.environ["GROQ_API_KEY"])
+        try:
+            import streamlit as st
+            api_key = st.secrets["GROQ_API_KEY"]
+        except Exception:
+            api_key = os.environ["GROQ_API_KEY"]
+        _client = Groq(api_key=api_key)
     return _client
 
 
