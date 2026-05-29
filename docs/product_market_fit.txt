@@ -1,0 +1,29 @@
+Product-Market Fit: What It Is and How to Find It
+
+Product-market fit (PMF) means being in a good market with a product that can satisfy that market. Marc Andreessen coined the term, and it remains the single most important milestone for an early-stage startup.
+
+The Sean Ellis Test is the most common way to measure PMF: survey your users and ask "How would you feel if you could no longer use this product?" If more than 40% say "very disappointed," you likely have PMF. Below 40% means you need to keep iterating.
+
+Signs you have PMF:
+- Users come back without being reminded
+- Word-of-mouth is your biggest acquisition channel
+- You struggle to keep up with demand
+- Churn is low and users complain loudly when features are removed
+- People tell friends about your product unprompted
+
+How to find PMF:
+1. Start with a narrow, specific customer segment. Don't try to serve everyone.
+2. Talk to 50+ potential customers before building anything.
+3. Find the problem that makes people say "yes, this is a huge pain."
+4. Build the smallest thing that solves that pain.
+5. Get 10 users who love it before acquiring 100 who are lukewarm.
+
+Common mistakes:
+- Confusing activity (signups, page views) with retention and love
+- Expanding to new segments before nailing the first one
+- Mistaking polite feedback for genuine enthusiasm
+- Optimizing for growth before confirming retention
+
+YC partners often say: if you have to ask whether you have PMF, you probably don't. When you have it, it feels obvious — customers pull the product out of you rather than you pushing it at them.
+
+The pivot decision: if after 6-12 months of focused effort you cannot get past 20-25% on the Ellis test with any customer segment, consider a pivot. Change either the customer, the problem, or the solution — not all three at once.

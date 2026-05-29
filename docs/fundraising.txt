@@ -1,0 +1,44 @@
+How to Raise a Seed Round
+
+Fundraising is a necessary evil for most startups. The goal is to raise enough money to reach your next meaningful milestone, not to maximize the amount raised.
+
+When to raise:
+- You have a clear hypothesis you want to test
+- You have some early signal (users, revenue, or a compelling insight)
+- You can articulate what you'll do with the money and what it buys you
+- Raising before any of these is extremely hard and dilutes you heavily
+
+How much to raise:
+- Target 18-24 months of runway
+- Be specific: list your hires and costs, don't just guess
+- Raise 20% more than you think you need
+- Typical pre-seed: $500K–$1.5M. Seed: $1.5M–$4M.
+
+The process:
+1. Build a list of 50–100 investors (angels, pre-seed funds, seed funds)
+2. Get warm introductions wherever possible — cold outreach has a very low hit rate
+3. Run a tight process: compress all meetings into 2-3 weeks to create momentum
+4. Get a lead investor first — others follow
+5. Once you have a term sheet, close quickly
+
+What investors look for at seed:
+- Team: domain expertise, execution speed, cofounder dynamics
+- Market: large enough to build a big company
+- Insight: do you know something others don't?
+- Traction: any evidence customers want this
+
+The pitch narrative:
+- Start with the problem (make them feel the pain)
+- Explain your solution and why it works
+- Show traction or validation
+- Describe the market size
+- Explain why you and your team are uniquely suited to win
+
+Common mistakes:
+- Pitching too early without any validation
+- Asking for NDAs (investors won't sign them)
+- Sending a deck cold without context
+- Optimizing for valuation over finding the right partner
+- Raising too little and running out of runway before hitting milestones
+
+SAFE notes vs priced rounds: most seed rounds now use SAFEs (Simple Agreement for Future Equity). They're faster and cheaper to close than priced rounds. Use a post-money SAFE with a valuation cap. Standard caps are $8M–$15M for pre-seed, $15M–$25M for seed depending on traction.

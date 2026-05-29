@@ -1,0 +1,45 @@
+Hiring Your First 10 Employees
+
+The first 10 hires define your company's culture and trajectory more than almost any other decision. Get this right.
+
+Who to hire first:
+- Only hire when you have a specific, painful gap you cannot fill yourself
+- The first hires should be generalists who can do multiple things
+- Avoid hiring managers before you have a team for them to manage
+- Engineers and people who directly build or sell the product first
+
+The bar:
+- Every hire should raise the average. If you're unsure, don't hire.
+- Paul Graham's test: would this person be a founder? If yes, hire them.
+- Hire for hunger and learning speed over credentials at early stage
+- Culture fit matters: would you want to be stuck in an airport with this person?
+
+Where to find early hires:
+- Your personal network is the best source
+- Former colleagues who you've worked with and trust
+- Referrals from your existing team
+- YC's Work at a Startup, Wellfound (AngelList Talent)
+- Twitter/X and LinkedIn for niche technical roles
+
+Compensation at early stage:
+- Salaries will be below market — offset with equity
+- Typical early engineer: 0.5%–2% equity depending on stage and role
+- First non-founder hire at pre-seed: can be up to 1-2%
+- Use a 4-year vest with a 1-year cliff as standard
+
+Red flags to avoid:
+- Candidates who optimize for title over impact
+- People who need a lot of process and structure to function
+- Anyone who talks more about what they won't do than what they will
+- Candidates who have never worked in a fast-moving environment
+
+Firing fast:
+- Most founders wait too long to fire underperformers
+- A bad hire in a 5-person team is catastrophic — act quickly
+- Give clear feedback first, but if no change in 2-3 weeks, move on
+- Keeping a bad hire "to avoid conflict" is unfair to the rest of the team
+
+Remote vs in-person:
+- In-person is strongly preferred for the first 10 hires if possible
+- Co-location accelerates communication speed dramatically at early stage
+- If remote, default hours and over-communicate on async tools
