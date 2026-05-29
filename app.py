@@ -1,6 +1,14 @@
+import re
 import streamlit as st
 from retrieval import retrieve
-from llm import answer
+from llm import answer, answer_stream
+
+
+def display_name(filename):
+    name = filename.removesuffix(".txt")
+    # scraped files: "paulgraham_com_slug_html" → "slug"
+    name = re.sub(r"^[a-z0-9]+_com_(.+?)(?:_html)?$", r"\1", name)
+    return name.replace("_", " ").title()
 
 st.title("Startup Advisor")
 st.caption("Ask anything about fundraising, product-market fit, hiring, and more.")
@@ -14,7 +22,7 @@ for msg in st.session_state.messages:
         if msg["role"] == "assistant" and msg.get("sources"):
             with st.expander("Sources"):
                 for chunk in msg["sources"]:
-                    st.markdown(f"**{chunk['source']}**")
+                    st.markdown(f"**{display_name(chunk['source'])}**")
                     st.caption(chunk["text"][:300] + "...")
 
 if question := st.chat_input("Ask a startup question..."):
@@ -23,13 +31,13 @@ if question := st.chat_input("Ask a startup question..."):
         st.write(question)
 
     with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
+        with st.spinner("Finding relevant sources..."):
             chunks = retrieve(question, k=4)
-            response = answer(question, chunks)
-        st.write(response)
+        history = st.session_state.messages[:-1][-6:]
+        response = st.write_stream(answer_stream(question, chunks, history))
         with st.expander("Sources"):
             for chunk in chunks:
-                st.markdown(f"**{chunk['source']}**")
+                st.markdown(f"**{display_name(chunk['source'])}**")
                 st.caption(chunk["text"][:300] + "...")
 
     st.session_state.messages.append({

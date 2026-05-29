@@ -20,17 +20,25 @@ def _load():
         _model = SentenceTransformer(MODEL_NAME)
 
 
-def retrieve(query, k=4):
+def retrieve(query, k=4, threshold=0.3, max_per_source=2):
     _load()
     embedding = _model.encode([query], convert_to_numpy=True).astype(np.float32)
-    distances, indices = _index.search(embedding, k)
+    faiss.normalize_L2(embedding)
+    distances, indices = _index.search(embedding, k * 3)
     results = []
+    source_counts = {}
     for idx, dist in zip(indices[0], distances[0]):
-        if idx == -1:
+        if idx == -1 or dist < threshold:
             continue
         chunk = _metadata[idx].copy()
+        source = chunk["source"]
+        if source_counts.get(source, 0) >= max_per_source:
+            continue
         chunk["score"] = float(dist)
         results.append(chunk)
+        source_counts[source] = source_counts.get(source, 0) + 1
+        if len(results) == k:
+            break
     return results
 
 

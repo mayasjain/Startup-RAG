@@ -22,12 +22,33 @@ def load_documents(docs_dir):
 
 
 def chunk_text(text, chunk_size, overlap):
+    paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
     chunks = []
-    start = 0
-    while start < len(text):
-        end = start + chunk_size
-        chunks.append(text[start:end])
-        start += chunk_size - overlap
+    current_parts = []
+    current_len = 0
+
+    for para in paragraphs:
+        if len(para) > chunk_size:
+            if current_parts:
+                chunks.append("\n\n".join(current_parts))
+                current_parts, current_len = [], 0
+            start = 0
+            while start < len(para):
+                chunks.append(para[start:start + chunk_size])
+                start += chunk_size - overlap
+            continue
+
+        if current_len + len(para) > chunk_size and current_parts:
+            chunks.append("\n\n".join(current_parts))
+            current_parts = current_parts[-1:]
+            current_len = len(current_parts[0])
+
+        current_parts.append(para)
+        current_len += len(para)
+
+    if current_parts:
+        chunks.append("\n\n".join(current_parts))
+
     return chunks
 
 
@@ -62,8 +83,10 @@ def main():
 
     print("Building FAISS index...")
     dim = embeddings.shape[1]
-    index = faiss.IndexFlatL2(dim)
-    index.add(embeddings.astype(np.float32))
+    embeddings = embeddings.astype(np.float32)
+    faiss.normalize_L2(embeddings)
+    index = faiss.IndexFlatIP(dim)
+    index.add(embeddings)
 
     faiss.write_index(index, os.path.join(DATA_DIR, "index.faiss"))
     with open(os.path.join(DATA_DIR, "metadata.pkl"), "wb") as f:
